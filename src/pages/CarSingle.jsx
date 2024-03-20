@@ -6,6 +6,8 @@ import {
   useParams,
   useSearchParams,
 } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -752,10 +754,18 @@ function CarSingle() {
                         gap: "10px",
                       }}
                     >
-                      <img
-                        src="./images/user-img.png"
-                        style={{ width: "20px", height: "20px" }}
-                      ></img>
+                      {/* <img
+                          src="./images/user-img.png"
+                          style={{ width: "20px", height: "20px" }}
+                        ></img> */}
+                      <FontAwesomeIcon
+                        icon={faUser}
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          marginTop: "4px",
+                        }}
+                      />
                       Login
                     </button>
                     <span id="menu-btn" />
@@ -771,7 +781,10 @@ function CarSingle() {
       <div className="no-bottom no-top zebra" id="content">
         <div id="top" />
         {/* section begin */}
-        <section className="home-slider-section" style={{ padding: "0px" }}>
+        <section
+          className="home-slider-section"
+          style={{ padding: "0px", position: "relative" }}
+        >
           <div className="home-slider">
             <Carousel
               className="home-slider"
@@ -836,6 +849,59 @@ function CarSingle() {
                 <div className="overlay"></div>
               </div>
             </Carousel>
+            {/* <img src="./images/happy (9).png" alt="" style={{width: "50px", height: "50px", backgroundColor: "rgb(21, 107, 122)"}}></img> */}
+            <div
+              className=""
+              style={{
+                position: "absolute",
+                transform: "translate(-50%, -50%)",
+                top: "50%",
+                right: "0%",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <a href="#">
+                <img
+                  src="./images/happy (9).png"
+                  alt=""
+                  style={{
+                    width: "70px",
+                    height: "70px",
+                  }}
+                ></img>
+              </a>
+              <a href="#">
+                <img
+                  src="./images/happy (6).png"
+                  alt=""
+                  style={{
+                    width: "70px",
+                    height: "70px",
+                  }}
+                ></img>
+              </a>
+              <a href="#">
+                <img
+                  src="./images/happy (7).png"
+                  alt=""
+                  style={{
+                    width: "70px",
+                    height: "70px",
+                  }}
+                ></img>
+              </a>
+              <a href="#">
+                <img
+                  src="./images/happy (8).png"
+                  alt=""
+                  style={{
+                    width: "70px",
+                    height: "70px",
+                  }}
+                ></img>
+              </a>
+            </div>
           </div>
         </section>
         {/* section close */}

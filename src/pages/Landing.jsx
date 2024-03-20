@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -767,10 +770,18 @@ function Landing() {
                           gap: "10px",
                         }}
                       >
-                        <img
+                        {/* <img
                           src="./images/user-img.png"
                           style={{ width: "20px", height: "20px" }}
-                        ></img>
+                        ></img> */}
+                        <FontAwesomeIcon
+                          icon={faUser}
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            marginTop: "4px",
+                          }}
+                        />
                         Login
                       </button>
                       <span id="menu-btn" />
@@ -783,7 +794,10 @@ function Landing() {
         </header>
         <main id="content" className="site-main" style={{ padding: "0px" }}>
           {/* <!-- Home slider html start brightstar --> */}
-          <section className="home-slider-section" style={{ padding: "0px" }}>
+          <section
+            className="home-slider-section"
+            style={{ padding: "0px", position: "relative" }}
+          >
             <div className="home-slider">
               <Carousel
                 className="home-slider"
@@ -854,6 +868,59 @@ function Landing() {
                   <div className="overlay"></div>
                 </div>
               </Carousel>
+              {/* <img src="./images/happy (9).png" alt="" style={{width: "50px", height: "50px", backgroundColor: "rgb(21, 107, 122)"}}></img> */}
+              <div
+                className=""
+                style={{
+                  position: "absolute",
+                  transform: "translate(-50%, -50%)",
+                  top: "50%",
+                  right: "0%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <a href="#">
+                  <img
+                    src="./images/happy (9).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/happy (6).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/happy (7).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/happy (8).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
+              </div>
             </div>
           </section>
           {/* <!-- slider html start --> */}
@@ -924,7 +991,10 @@ function Landing() {
                     <h2>Nuestras mejores viviendas</h2>
                   </div>
                   <div className="col-lg-5">
-                    <div className="section-disc">
+                    <div
+                      className="section-disc"
+                      style={{ textAlign: "center", color: "black" }}
+                    >
                       Convierte tu propiedad en una experiencia inolvidable para
                       cada huésped
                     </div>
@@ -1247,13 +1317,13 @@ function Landing() {
           </section> */}
           {/* <!-- packages html end --> */}
           {/* <!-- Home callback section html start --> */}
-          <section className="callback-section">
+          <section className="callback-section" style={{ padding: "0px" }}>
             <div className="container">
               <div className="row no-gutters align-items-center">
                 <div className="col-lg-5">
                   <div
                     className="callback-img"
-                    style={{ backgroundImage: "url(./images/8.png)" }}
+                    style={{ backgroundImage: "url(./images/fly_12.jpg)" }}
                   >
                     <div className="video-button">
                       <a id="video-container" data-video-id="IUN664s7N-c">
@@ -1265,23 +1335,49 @@ function Landing() {
                 <div className="col-lg-7">
                   <div className="callback-inner">
                     <div className="section-heading section-heading-white">
-                      <h5 className="dash-style">CALLBACK FOR MORE</h5>
-                      <h2 style={{ textAlign: "right", paddingRight: "10%" }}>
+                      <h3 className="dash-style">
+                        Maximizamos tu éxito y satisfacción
+                      </h3>
+                      <h2
+                        style={{
+                          textAlign: "right",
+                          paddingRight: "10%",
+                          fontSize: "60px",
+                          letterSpacing: "2px",
+                          wordSpacing: "5px",
+                        }}
+                      >
                         BE HAPPY <br />
-                        BE GLOOVE
+                        BE{" "}
+                        <span
+                          style={{
+                            textShadow: "0 0px 20px rgba(255,255,255,1)",
+                          }}
+                        >
+                          GLOOVE
+                        </span>
                       </h2>
-                      <p>Nuestros Servicios Estrella</p>
+                      <p style={{ fontSize: "20px" }}>
+                        Nuestros Servicios Estrella
+                      </p>
                     </div>
                     <div className="callback-counter-wrap">
                       <div className="counter-item">
                         <div className="counter-icon">
-                          <img src="./images/happy (2).png" alt="" />
+                          <img
+                            src="./images/happy (2).png"
+                            alt=""
+                            style={{ scale: "1.3" }}
+                          />
                         </div>
                         <div className="counter-content">
                           {/* <span className="counter-no">
                             <span className="counter">500</span>K+
                           </span> */}
-                          <span className="counter-text">
+                          <span
+                            className="counter-text"
+                            style={{ fontSize: "20px" }}
+                          >
                             Aperturas <br />
                             inteligentes
                           </span>
@@ -1289,13 +1385,20 @@ function Landing() {
                       </div>
                       <div className="counter-item">
                         <div className="counter-icon">
-                          <img src="./images/happy (3).png" alt="" />
+                          <img
+                            src="./images/happy (3).png"
+                            alt=""
+                            style={{ scale: "1.3" }}
+                          />
                         </div>
                         <div className="counter-content">
                           {/* <span className="counter-no">
                             <span className="counter">250</span>K+
                           </span> */}
-                          <span className="counter-text">
+                          <span
+                            className="counter-text"
+                            style={{ fontSize: "20px" }}
+                          >
                             Soporte Integral
                             <br /> 24/7
                           </span>
@@ -1303,24 +1406,40 @@ function Landing() {
                       </div>
                       <div className="counter-item">
                         <div className="counter-icon">
-                          <img src="./images/happy (4).png" alt="" />
+                          <img
+                            src="./images/happy (4).png"
+                            alt=""
+                            style={{ scale: "1.3" }}
+                          />
                         </div>
                         <div className="counter-content">
                           {/* <span className="counter-no">
                             <span className="counter">15</span>K+
                           </span> */}
-                          <span className="counter-text">Autogestión</span>
+                          <span
+                            className="counter-text"
+                            style={{ fontSize: "20px" }}
+                          >
+                            Autogestión
+                          </span>
                         </div>
                       </div>
                       <div className="counter-item">
                         <div className="counter-icon">
-                          <img src="./images/happy (5).png" alt="" />
+                          <img
+                            src="./images/happy (5).png"
+                            alt=""
+                            style={{ scale: "1.3" }}
+                          />
                         </div>
                         <div className="counter-content">
                           {/* <span className="counter-no">
                             <span className="counter">10</span>K+
                           </span> */}
-                          <span className="counter-text">
+                          <span
+                            className="counter-text"
+                            style={{ fontSize: "20px" }}
+                          >
                             Optimización del
                             <br /> precio
                           </span>
@@ -1331,12 +1450,12 @@ function Landing() {
                       className="support-area"
                       style={{
                         borderRadius: "80px",
-                        backgroundColor: "#156B7A",
-                        padding: "20px 50px",
+                        backgroundColor: "#22AA22",
+                        padding: "10px 50px",
                       }}
                     >
                       <div className="support-icon">
-                        <img
+                        {/* <img
                           src="./images/icon5.png"
                           alt=""
                           style={{
@@ -1344,12 +1463,30 @@ function Landing() {
                             borderRadius: "50px",
                             padding: "5px",
                           }}
+                        /> */}
+                        <FontAwesomeIcon
+                          icon={faPhone}
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            color:"white",
+                            border: "2px solid white",
+                            borderRadius: "50px",
+                            padding: "10px",
+                          }}
                         />
                       </div>
                       <div className="support-content">
                         {/* <h4>Our 24/7 Emergency Phone Services</h4> */}
                         <h3>
-                          <a href="#" style={{ color: "white" }}>
+                          <a
+                            href="#"
+                            style={{
+                              color: "white",
+                              width: "fit-content",
+                              fontWeight: "200",
+                            }}
+                          >
                             ¡Hablemos!
                           </a>
                         </h3>
@@ -1364,20 +1501,25 @@ function Landing() {
           {/* <!-- Home activity section html start --> */}
           <section className="activity-section" style={{ padding: "0px" }}>
             <div className="container">
-              <div className="section-heading text-center">
+              <div
+                className="section-heading text-center"
+                style={{ marginBottom: "0px" }}
+              >
                 <div className="row">
-                  <h5
+                  <h3
                     className="dash-style"
                     style={{
                       color: "#156B7A",
-                      fontSize: "44px",
-                      textAlign: "left",
+                      textAlign: "center",
+                      width: "fit-content",
+                      margin: "auto",
+                      marginBottom: "40px",
                     }}
                   >
                     Nuestro Éxito en el Alojamiento Turístico
-                  </h5>
+                  </h3>
                   <div className="col-lg-8 offset-lg-2">
-                    <h2>¿CÓMO FUNCIONAMOS?</h2>
+                    <h3>¿CÓMO FUNCIONAMOS?</h3>
                     {/* <p>
                       Mollit voluptatem perspiciatis convallis elementum
                       corporis quo veritatis aliquid blandit, blandit torquent,
@@ -1389,100 +1531,139 @@ function Landing() {
               </div>
               <div
                 className="activity-inner row"
-                style={{ display: "flex", marginLeft: "8%" }}
+                style={{ display: "flex", marginLeft: "8%", marginTop: "20px" }}
               >
                 <div className="" style={{ width: "fit-content" }}>
-                  <div className="activity-item" style={{ border: "none" }}>
-                    <div className="activity-icon">
+                  <div
+                    className="activity-item"
+                    style={{ border: "none", padding: "0px" }}
+                  >
+                    <div
+                      className="activity-icon"
+                      style={{ marginBottom: "40px" }}
+                    >
                       <a href="#">
                         <img
-                          src="./images/bot-1.png"
+                          src="./images/bot-10.png"
                           alt=""
-                          style={{ width: "auto" }}
+                          style={{ width: "200px" }}
                         />
                       </a>
                     </div>
                     <div className="activity-content">
-                      <h4>
-                        <a href="#">Adventure</a>
-                      </h4>
-                      <p>15 Destination</p>
+                      <h5 style={{ color: "#156B7A" }}>
+                        Una vez se firma el contrato, <br />
+                        procedemos a la realizaciön <br />
+                        de las fotos y el pedido de la <br />
+                        domötica
+                      </h5>
                     </div>
                   </div>
                 </div>
                 <div className="" style={{ width: "fit-content" }}>
-                  <div className="activity-item" style={{ border: "none" }}>
-                    <div className="activity-icon">
+                  <div
+                    className="activity-item"
+                    style={{ border: "none", padding: "0px" }}
+                  >
+                    <div
+                      className="activity-icon"
+                      style={{ marginBottom: "40px" }}
+                    >
                       <a href="#">
                         <img
-                          src="./images/bot-2.png"
+                          src="./images/bot-20.png"
                           alt=""
-                          style={{ width: "auto" }}
+                          style={{ width: "200px" }}
                         />
                       </a>
                     </div>
                     <div className="activity-content">
-                      <h4>
-                        <a href="#">Trekking</a>
-                      </h4>
-                      <p>12 Destination</p>
+                      <h5 style={{ color: "#156B7A" }}>
+                        Pasados unos dias, <br />
+                        instalamos la domética en la <br />
+                        propiedad y ultimamos todo <br />
+                        tipo de detalles
+                      </h5>
                     </div>
                   </div>
                 </div>
                 <div className="" style={{ width: "fit-content" }}>
-                  <div className="activity-item" style={{ border: "none" }}>
-                    <div className="activity-icon">
+                  <div
+                    className="activity-item"
+                    style={{ border: "none", padding: "0px" }}
+                  >
+                    <div
+                      className="activity-icon"
+                      style={{ marginBottom: "40px" }}
+                    >
                       <a href="#">
                         <img
-                          src="./images/bot-3.png"
+                          src="./images/bot-30.png"
                           alt=""
-                          style={{ width: "auto" }}
+                          style={{ width: "200px" }}
                         />
                       </a>
                     </div>
                     <div className="activity-content">
-                      <h4>
-                        <a href="#">Camp Fire</a>
-                      </h4>
-                      <p>7 Destination</p>
+                      <h5 style={{ color: "#156B7A" }}>
+                        Elaboramos y posteriormente <br />
+                        publicamos los anuncios en <br />
+                        todas las plataformas con las <br />
+                        que trabajamos
+                      </h5>
                     </div>
                   </div>
                 </div>
                 <div className="" style={{ width: "fit-content" }}>
-                  <div className="activity-item" style={{ border: "none" }}>
-                    <div className="activity-icon">
+                  <div
+                    className="activity-item"
+                    style={{ border: "none", padding: "0px" }}
+                  >
+                    <div
+                      className="activity-icon"
+                      style={{ marginBottom: "40px" }}
+                    >
                       <a href="#">
                         <img
-                          src="./images/bot-4.png"
+                          src="./images/bot-40.png"
                           alt=""
-                          style={{ width: "auto" }}
+                          style={{ width: "200px" }}
                         />
                       </a>
                     </div>
                     <div className="activity-content">
-                      <h4>
-                        <a href="#">Off Road</a>
-                      </h4>
-                      <p>15 Destination</p>
+                      <h5 style={{ color: "#156B7A" }}>
+                        Comenzamos con el proceso <br />
+                        comercial con todos los <br />
+                        clientes interesados en la <br />
+                        vivienda
+                      </h5>
                     </div>
                   </div>
                 </div>
                 <div className="" style={{ width: "fit-content" }}>
-                  <div className="activity-item" style={{ border: "none" }}>
-                    <div className="activity-icon">
+                  <div
+                    className="activity-item"
+                    style={{ border: "none", padding: "0px" }}
+                  >
+                    <div
+                      className="activity-icon"
+                      style={{ marginBottom: "40px" }}
+                    >
                       <a href="#">
                         <img
-                          src="./images/bot-5.png"
+                          src="./images/bot-50.png"
                           alt=""
-                          style={{ width: "auto" }}
+                          style={{ width: "200px" }}
                         />
                       </a>
                     </div>
                     <div className="activity-content">
-                      <h4>
-                        <a href="#">Camping</a>
-                      </h4>
-                      <p>13 Destination</p>
+                      <h5 style={{ color: "#156B7A" }}>
+                        Pasados unos dia la vivienda <br />
+                        comienza a generar sus <br />
+                        primeros ingresos
+                      </h5>
                     </div>
                   </div>
                 </div>
@@ -1506,22 +1687,141 @@ function Landing() {
                   </div>
                 </div> */}
               </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "50px",
+                }}
+              >
+                <button
+                  style={{
+                    width: "fit-content",
+                    margin: "auto",
+                    padding: "30px 40px",
+                    border: "0px",
+                    borderRadius: "100px",
+                    color: "white",
+                    fontSize: "26px",
+                    backgroundColor: "#156B7A",
+                  }}
+                >
+                  ¡Quiero saber más!
+                </button>
+              </div>
             </div>
           </section>
           {/* <!-- activity html end --> */}
           {/* <!-- Home special section html start --> */}
+
+          <section
+            className="subscribe-section"
+            style={{
+              backgroundImage: "url(./images/19.png)",
+              marginTop: "100px",
+              padding: "75px",
+            }}
+          >
+            <div className="container">
+              <div className="client-section">
+                <h3 style={{ color: "white", textAlign: "center" }}>
+                  Nuestros aliados estratégicos
+                </h3>
+                <div className="container">
+                  <div
+                    className="client-wrap client-slider secondary-bg"
+                    style={{ backgroundColor: "initial" }}
+                  >
+                    <Carousel
+                      className="home-slider"
+                      responsive={responsive2}
+                      showDots={false}
+                      infinite={true}
+                      autoPlay={true}
+                      keyBoardControl={false}
+                      arrows={false}
+                      autoPlaySpeed={3500}
+                      dotListClass="custom-dot-list-style"
+                      slidesToSlide={1}
+                    >
+                      <div className="client-item">
+                        <figure>
+                          <img
+                            src="./images/logo1.png"
+                            alt=""
+                            draggable={false}
+                          />
+                        </figure>
+                      </div>
+                      <div className="client-item">
+                        <figure>
+                          <img
+                            src="./images/logo2.png"
+                            alt=""
+                            draggable={false}
+                          />
+                        </figure>
+                      </div>
+                      <div className="client-item">
+                        <figure>
+                          <img
+                            src="./images/logo3.png"
+                            alt=""
+                            draggable={false}
+                          />
+                        </figure>
+                      </div>
+                      <div className="client-item">
+                        <figure>
+                          <img
+                            src="./images/logo4.png"
+                            alt=""
+                            draggable={false}
+                          />
+                        </figure>
+                      </div>
+                      <div className="client-item">
+                        <figure>
+                          <img
+                            src="./images/logo5.png"
+                            alt=""
+                            draggable={false}
+                          />
+                        </figure>
+                      </div>
+                      <div className="client-item">
+                        <figure>
+                          <img
+                            src="./images/logo2.png"
+                            alt=""
+                            draggable={false}
+                          />
+                        </figure>
+                      </div>
+                    </Carousel>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           <section className="special-section">
             <div className="container">
               <div className="section-heading text-center">
                 <div className="row">
                   <div className="col-lg-8 offset-lg-2">
-                    <h5
+                    <h3
                       className="dash-style"
-                      style={{ color: "#156B7A", fontSize: "28px" }}
+                      style={{
+                        color: "#156B7A",
+                        width: "fit-content",
+                        margin: "20px auto",
+                      }}
                     >
                       Tecnología más avanzada
-                    </h5>
-                    <h3>EL MEJOR PRECIO DEL MERCADO</h3>
+                    </h3>
+                    <h3 style={{ color: "black", wordSpacing: "5px" }}>
+                      EL MEJOR PRECIO DEL MERCADO
+                    </h3>
                     {/* <p>
                       Mollit voluptatem perspiciatis convallis elementum
                       corporis quo veritatis aliquid blandit, blandit torquent,
@@ -1531,22 +1831,26 @@ function Landing() {
                   </div>
                 </div>
               </div>
-              <div className="special-inner">
-                <div className="row">
+              <div className="special-inner" style={{ marginTop: "50px" }}>
+                <div className="row" style={{ height: "fit-content" }}>
                   <div className="col-md-6 col-lg-6">
-                    <div className="special-item">
-                      <figure className="special-img">
-                        <img src="./images/7.png" alt="" />
-                      </figure>
-                      <div className="badge-dis">
-                        <span>
-                          <strong>20%</strong>
-                          {/* off */}
-                        </span>
-                      </div>
+                    <div
+                      className="special-item"
+                      style={{
+                        display: "flex",
+                        justifyContent: "right",
+                        height: "100%",
+                      }}
+                    >
                       <div
                         className="special-content"
-                        style={{ backgroundColor: "#156B7A" }}
+                        style={{
+                          backgroundColor: "#156B7A",
+                          marginTop: "0px",
+                          width: "fit-content",
+                          position: "relative",
+                          padding: "60px 40px",
+                        }}
                       >
                         <div className="meta-cat">
                           {/* <a href="#">CANADA</a> */}
@@ -1557,7 +1861,7 @@ function Landing() {
                           </a>
                         </h3>
                         <div className="package-price">
-                          <h5 style={{ color: "white" }}>
+                          <h3 style={{ color: "white", fontWeight: "200" }}>
                             • Sesión fotográfica <br />
                             • Domotización de la Vivienda <br />
                             • Creación de anuncio <br />
@@ -1566,53 +1870,94 @@ function Landing() {
                             • Atención al huésped <br />
                             • Check-in/check-out <br />
                             • Call center 24H <br />• Gestión diaria de precios
-                          </h5>
+                            <br />
+                            <span
+                              style={{
+                                textShadow: "0 0px 10px rgba(255,255,255,1)",
+                              }}
+                            >
+                              • Gestidn de limpieza, lavanderia y mantenimiento.{" "}
+                              <br />
+                              • Amenities y Kits de Bienvenida
+                              <br />
+                            </span>
+                          </h3>
                           {/* Price:
                           <del>$1500</del>
                           <ins>$1200</ins> */}
+                        </div>
+                        <div
+                          className="badge-dis"
+                          style={{
+                            backgroundColor: "white",
+                            border: "1px dashed #156B7A",
+                            top: "-40px",
+                            right: "-40px",
+                          }}
+                        >
+                          <span>
+                            <strong style={{ color: "#156B7A" }}>20%</strong>
+                            {/* off */}
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="col-md-6 col-lg-6">
-                    <div className="special-item">
-                      <figure className="special-img">
-                        <img src="./images/9.png" alt="" />
-                      </figure>
-                      <div className="badge-dis">
-                        <span>
-                          <strong>15%</strong>
-                          {/* off */}
-                        </span>
-                      </div>
+                    <div
+                      className="special-item"
+                      style={{
+                        display: "flex",
+                        justifyContent: "left",
+                        height: "100%",
+                      }}
+                    >
                       <div
                         className="special-content"
-                        style={{ backgroundColor: "#156B7A" }}
+                        style={{
+                          backgroundColor: "#156B7A",
+                          marginTop: "0px",
+                          width: "fit-content",
+                          position: "relative",
+                          padding: "60px 40px",
+                        }}
                       >
-                        {/* <div className="meta-cat">
-                          <a href="#" style={{color: "white"}}>NEW ZEALAND</a>
-                        </div> */}
+                        <div className="meta-cat">
+                          {/* <a href="#">CANADA</a> */}
+                        </div>
                         <h3>
                           <a href="#" style={{ color: "white" }}>
                             Gest ión Básica
                           </a>
                         </h3>
                         <div className="package-price">
-                          <h5 style={{ color: "white" }}>
+                          <h3 style={{ color: "white", fontWeight: "200" }}>
                             • Sesión fotográfica <br />
-                            • Domotización de la Vivienda
-                            <br />
+                            • Domotización de la Vivienda <br />
                             • Creación de anuncio <br />
                             • Publicación en diferentes plataformas <br />
                             • Gestión de reservas <br />
                             • Atención al huésped <br />
                             • Check-in/check-out <br />
-                            • Call center 24H
-                            <br />• Gestión diaria de precios
-                          </h5>
+                            • Call center 24H <br />• Gestión diaria de precios
+                          </h3>
                           {/* Price:
-                          <del>$1300</del>
-                          <ins>$1105</ins> */}
+                          <del>$1500</del>
+                          <ins>$1200</ins> */}
+                        </div>
+                        <div
+                          className="badge-dis"
+                          style={{
+                            backgroundColor: "white",
+                            border: "1px dashed #156B7A",
+                            top: "-40px",
+                            right: "-40px",
+                          }}
+                        >
+                          <span>
+                            <strong style={{ color: "#156B7A" }}>15%</strong>
+                            {/* off */}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1649,7 +1994,7 @@ function Landing() {
           </section>
           {/* <!-- special html end --> */}
           {/* <!-- Home special section html start --> */}
-          <section className="best-section">
+          {/* <section className="best-section">
             <div className="container">
               <div className="row">
                 <div
@@ -1705,102 +2050,9 @@ function Landing() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* <!-- best html end --> */}
           {/* <!-- Home client section html start brightstar --> */}
-          <div className="client-section">
-            <div className="container">
-              <div
-                className="client-wrap client-slider secondary-bg"
-                style={{ backgroundColor: "#156B7A" }}
-              >
-                <Carousel
-                  className="home-slider"
-                  responsive={responsive2}
-                  showDots={false}
-                  infinite={true}
-                  autoPlay={true}
-                  keyBoardControl={false}
-                  arrows={false}
-                  autoPlaySpeed={3500}
-                  dotListClass="custom-dot-list-style"
-                  slidesToSlide={1}
-                >
-                  <div className="client-item">
-                    <figure>
-                      <img src="./images/logo1.png" alt="" draggable={false} />
-                    </figure>
-                  </div>
-                  <div className="client-item">
-                    <figure>
-                      <img src="./images/logo2.png" alt="" draggable={false} />
-                    </figure>
-                  </div>
-                  <div className="client-item">
-                    <figure>
-                      <img src="./images/logo3.png" alt="" draggable={false} />
-                    </figure>
-                  </div>
-                  <div className="client-item">
-                    <figure>
-                      <img src="./images/logo4.png" alt="" draggable={false} />
-                    </figure>
-                  </div>
-                  <div className="client-item">
-                    <figure>
-                      <img src="./images/logo5.png" alt="" draggable={false} />
-                    </figure>
-                  </div>
-                  <div className="client-item">
-                    <figure>
-                      <img src="./images/logo2.png" alt="" draggable={false} />
-                    </figure>
-                  </div>
-                </Carousel>
-              </div>
-            </div>
-          </div>
-          {/* <!-- client html end --> */}
-          {/* <!-- Home subscribe section html start --> */}
-          <section
-            className="subscribe-section"
-            style={{ backgroundImage: "url(./images/19.png)" }}
-          >
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-7">
-                  <div className="section-heading section-heading-white">
-                    <h5 className="dash-style">HOLIDAY PACKAGE OFFER</h5>
-                    <h2>HOLIDAY SPECIAL 25% OFF !</h2>
-                    <h4>
-                      Sign up now to recieve hot special offers and information
-                      about the best tour packages, updates and discounts !!
-                    </h4>
-                    <div className="newsletter-form">
-                      <form>
-                        <input
-                          type="email"
-                          name="s"
-                          placeholder="Your Email Address"
-                        />
-                        <input
-                          type="submit"
-                          name="signup"
-                          value="SIGN UP NOW!"
-                        />
-                      </form>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-                      dapibus leo. Eaque adipiscing, luctus eleifend temporibus
-                      occaecat luctus eleifend tempo ribus.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
           {/* <!-- subscribe html end --> */}
           {/* <!-- Home blog section html start --> */}
           {/* <section className="blog-section">
@@ -1909,7 +2161,7 @@ function Landing() {
           <div
             className="testimonial-section"
             style={{
-              backgroundImage: "url(./images/img23.jpg)",
+              // backgroundImage: "url(./images/img23.jpg)",
               paddingTop: "50px",
             }}
           >
@@ -1941,9 +2193,14 @@ function Landing() {
                             eu.Dolorum aenean dolorem minima!? Corporis condi
                             mentum acpri! "
                           </p>
-                          <cite>
+                          <cite style={{ fontStyle: "normal" }}>
                             Johny English
-                            <span className="company">Travel Agent</span>
+                            <span
+                              className="company"
+                              style={{ color: "black", fontStyle: "normal" }}
+                            >
+                              Travel Agent
+                            </span>
                           </cite>
                         </div>
                       </div>
@@ -1960,9 +2217,14 @@ function Landing() {
                             eu.Dolorum aenean dolorem minima!? Corporis condi
                             mentum acpri! "
                           </p>
-                          <cite>
+                          <cite style={{ fontStyle: "normal" }}>
                             William Housten
-                            <span className="company">Travel Agent</span>
+                            <span
+                              className="company"
+                              style={{ color: "black", fontStyle: "normal" }}
+                            >
+                              Travel Agent
+                            </span>
                           </cite>
                         </div>
                       </div>

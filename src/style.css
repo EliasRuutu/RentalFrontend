@@ -567,7 +567,7 @@ a:visited {
 }
 
 .section-heading {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .section-heading h2 {
   font-size: 48px;
@@ -3024,7 +3024,7 @@ input[type=submit]:focus {
   margin-bottom: 140px;
 }
 .callback-section:before {
-  background-color: #0791BE;
+  background-color: #156B7A;
   content: "";
   width: 70%;
   height: 100%;
@@ -3106,7 +3106,7 @@ input[type=submit]:focus {
 .callback-counter-wrap .counter-content {
   width: -moz-calc(100% - 52px);
   width: -webkit-calc(100% - 52px);
-  width: calc(100% - 52px);
+  width: calc(85% - 52px);
   text-align: center;
 }
 .callback-counter-wrap .counter-no {
@@ -8765,3 +8765,7 @@ product checkout css
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.react-multiple-carousel__arrow {
+  margin-right: 50px;
+}

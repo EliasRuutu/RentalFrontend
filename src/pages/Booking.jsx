@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -85,283 +88,289 @@ function Booking() {
     <div id="wrapper">
       {/* page preloader begin */}
       <header
-        id="masthead"
-        className="site-header header-primary"
-        // style={{ visibility: "hidden" }}
-        style={{ display: "none" }}
-      >
-        {/* <!-- header html start --> */}
-        <div className="top-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 d-none d-lg-block">
-                <div className="header-contact-info">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i className="fas fa-phone-alt"></i> +01 (977) 2599 12
-                      </a>
-                    </li>
-                    <li>
-                      <a href="mailto:info@Travel.com">
-                        <i className="fas fa-envelope"></i> company@domain.com
-                      </a>
-                    </li>
-                    <li>
-                      <i className="fas fa-map-marker-alt"></i> 3146 Koontz
-                      Lane, California
-                    </li>
-                  </ul>
+          id="masthead"
+          className="site-header header-primary"
+          // style={{ visibility: "hidden" }}
+          style={{ display: "none" }}
+        >
+          {/* <!-- header html start --> */}
+          <div className="top-header">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-8 d-none d-lg-block">
+                  <div className="header-contact-info">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i className="fas fa-phone-alt"></i> +01 (977) 2599 12
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mailto:info@Travel.com">
+                          <i className="fas fa-envelope"></i> company@domain.com
+                        </a>
+                      </li>
+                      <li>
+                        <i className="fas fa-map-marker-alt"></i> 3146 Koontz
+                        Lane, California
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div className="col-lg-4 d-flex justify-content-lg-end justify-content-between">
-                <div className="header-social social-links">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-facebook-f" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-twitter" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-linkedin" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="header-search-icon">
-                  <button className="search-icon">
-                    <i className="fas fa-search"></i>
-                  </button>
+                <div className="col-lg-4 d-flex justify-content-lg-end justify-content-between">
+                  <div className="header-social social-links">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fab fa-facebook-f"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fab fa-instagram"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="header-search-icon">
+                    <button className="search-icon">
+                      <i className="fas fa-search"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="bottom-header">
-          <div className="container d-flex justify-content-between align-items-center">
-            <div className="site-identity">
-              <h1 className="site-title">
-                <a href="index.html">
-                  <img
-                    className="white-logo"
-                    src="./images/logo (2).png"
-                    alt="logo"
-                  />
-                  <img
-                    className="black-logo"
-                    src="./images/GLOOVE_marca_negro.png"
-                    alt="logo"
-                  />
-                </a>
-              </h1>
-            </div>
-            <div className="main-navigation d-none d-lg-block">
-              <nav id="navigation" className="navigation">
-                <ul>
-                  <li className="menu-item-has-children">
-                    <a href="index.html">Inicio</a>
-                    <ul>
-                      <li>
-                        <a href="index-v2.html">Home 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <a href="#">Tour</a>
-                    <ul>
-                      <li>
-                        <a href="destination.html">Destination</a>
-                      </li>
-                      <li>
-                        <a href="tour-packages.html">Tour Packages</a>
-                      </li>
-                      <li>
-                        <a href="package-offer.html">Package Offer</a>
-                      </li>
-                      <li>
-                        <a href="package-detail.html">Package Detail</a>
-                      </li>
-                      <li>
-                        <a href="tour-cart.html">Tour Cart</a>
-                      </li>
-                      <li>
-                        <a href="booking.html">Package Booking</a>
-                      </li>
-                      <li>
-                        <a href="confirmation.html">Confirmation</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <a href="#">Pages</a>
-                    <ul>
-                      <li>
-                        <a href="about.html">About</a>
-                      </li>
-                      <li>
-                        <a href="service.html">Service</a>
-                      </li>
-                      <li>
-                        <a href="career.html">Career</a>
-                      </li>
-                      <li>
-                        <a href="career-detail.html">Career Detail</a>
-                      </li>
-                      <li>
-                        <a href="tour-guide.html">Tour Guide</a>
-                      </li>
-                      <li>
-                        <a href="gallery.html">Gallery</a>
-                      </li>
-                      <li>
-                        <a href="single-page.html">Single Page</a>
-                      </li>
-                      <li>
-                        <a href="faq.html">FAQ Page</a>
-                      </li>
-                      <li>
-                        <a href="testimonial-page.html">Testimonial Page</a>
-                      </li>
-                      <li>
-                        <a href="popup.html">Popup</a>
-                      </li>
-                      <li>
-                        <a href="search-page.html">Search Page</a>
-                      </li>
-                      <li>
-                        <a href="404.html">404 Page</a>
-                      </li>
-                      <li>
-                        <a href="comming-soon.html">Comming Soon</a>
-                      </li>
-                      <li>
-                        <a href="contact.html">Contact</a>
-                      </li>
-                      <li>
-                        <a href="wishlist-page.html">Wishlist</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <a href="single-page.html">Shop</a>
-                    <ul>
-                      <li>
-                        <a href="product-right.html">Shop Archive</a>
-                      </li>
-                      <li>
-                        <a href="product-detail.html">Shop Single</a>
-                      </li>
-                      <li>
-                        <a href="product-cart.html">Shop Cart</a>
-                      </li>
-                      <li>
-                        <a href="product-checkout.html">Shop Checkout</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <a href="#">Blog</a>
-                    <ul>
-                      <li>
-                        <a href="blog-archive.html">Blog List</a>
-                      </li>
-                      <li>
-                        <a href="blog-archive-left.html">Blog Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="blog-archive-both.html">Blog Both Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="blog-single.html">Blog Single</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <a href="#">Dashboard</a>
-                    <ul>
-                      <li>
-                        <a href="admin/dashboard.html">Dashboard</a>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a href="#">User</a>
-                        <ul>
-                          <li>
-                            <a href="admin/user.html">User List</a>
-                          </li>
-                          <li>
-                            <a href="admin/user-edit.html">User Edit</a>
-                          </li>
-                          <li>
-                            <a href="admin/new-user.html">New User</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="admin/db-booking.html">Booking</a>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a href="admin/db-package.html">Package</a>
-                        <ul>
-                          <li>
-                            <a href="admin/db-package-active.html">
-                              Package Active
-                            </a>
-                          </li>
-                          <li>
-                            <a href="admin/db-package-pending.html">
-                              Package Pending
-                            </a>
-                          </li>
-                          <li>
-                            <a href="admin/db-package-expired.html">
-                              Package Expired
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="admin/db-comment.html">Comments</a>
-                      </li>
-                      <li>
-                        <a href="admin/db-wishlist.html">Wishlist</a>
-                      </li>
-                      <li>
-                        <a href="admin/login.html">Login</a>
-                      </li>
-                      <li>
-                        <a href="admin/forgot.html">Forget Password</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div className="header-btn">
-              <button className="button-primary">BOOK NOW</button>
+          <div className="bottom-header">
+            <div className="container d-flex justify-content-between align-items-center">
+              <div className="site-identity">
+                <h1 className="site-title">
+                  <a href="index.html">
+                    <img
+                      className="white-logo"
+                      src="./images/logo (2).png"
+                      alt="logo"
+                    />
+                    <img
+                      className="black-logo"
+                      src="./images/GLOOVE_marca_negro.png"
+                      alt="logo"
+                    />
+                  </a>
+                </h1>
+              </div>
+              <div className="main-navigation d-none d-lg-block">
+                <nav id="navigation" className="navigation">
+                  <ul>
+                    <li className="menu-item-has-children">
+                      <a href="index.html">Inicio</a>
+                      <ul>
+                        <li>
+                          <a href="index-v2.html">Home 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <a href="#">Tour</a>
+                      <ul>
+                        <li>
+                          <a href="destination.html">Destination</a>
+                        </li>
+                        <li>
+                          <a href="tour-packages.html">Tour Packages</a>
+                        </li>
+                        <li>
+                          <a href="package-offer.html">Package Offer</a>
+                        </li>
+                        <li>
+                          <a href="package-detail.html">Package Detail</a>
+                        </li>
+                        <li>
+                          <a href="tour-cart.html">Tour Cart</a>
+                        </li>
+                        <li>
+                          <a href="booking.html">Package Booking</a>
+                        </li>
+                        <li>
+                          <a href="confirmation.html">Confirmation</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <a href="#">Pages</a>
+                      <ul>
+                        <li>
+                          <a href="about.html">About</a>
+                        </li>
+                        <li>
+                          <a href="service.html">Service</a>
+                        </li>
+                        <li>
+                          <a href="career.html">Career</a>
+                        </li>
+                        <li>
+                          <a href="career-detail.html">Career Detail</a>
+                        </li>
+                        <li>
+                          <a href="tour-guide.html">Tour Guide</a>
+                        </li>
+                        <li>
+                          <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                          <a href="single-page.html">Single Page</a>
+                        </li>
+                        <li>
+                          <a href="faq.html">FAQ Page</a>
+                        </li>
+                        <li>
+                          <a href="testimonial-page.html">Testimonial Page</a>
+                        </li>
+                        <li>
+                          <a href="popup.html">Popup</a>
+                        </li>
+                        <li>
+                          <a href="search-page.html">Search Page</a>
+                        </li>
+                        <li>
+                          <a href="404.html">404 Page</a>
+                        </li>
+                        <li>
+                          <a href="comming-soon.html">Comming Soon</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                          <a href="wishlist-page.html">Wishlist</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <a href="single-page.html">Shop</a>
+                      <ul>
+                        <li>
+                          <a href="product-right.html">Shop Archive</a>
+                        </li>
+                        <li>
+                          <a href="product-detail.html">Shop Single</a>
+                        </li>
+                        <li>
+                          <a href="product-cart.html">Shop Cart</a>
+                        </li>
+                        <li>
+                          <a href="product-checkout.html">Shop Checkout</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <a href="#">Blog</a>
+                      <ul>
+                        <li>
+                          <a href="blog-archive.html">Blog List</a>
+                        </li>
+                        <li>
+                          <a href="blog-archive-left.html">Blog Left Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="blog-archive-both.html">Blog Both Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="blog-single.html">Blog Single</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <a href="#">Dashboard</a>
+                      <ul>
+                        <li>
+                          <a href="admin/dashboard.html">Dashboard</a>
+                        </li>
+                        <li className="menu-item-has-children">
+                          <a href="#">User</a>
+                          <ul>
+                            <li>
+                              <a href="admin/user.html">User List</a>
+                            </li>
+                            <li>
+                              <a href="admin/user-edit.html">User Edit</a>
+                            </li>
+                            <li>
+                              <a href="admin/new-user.html">New User</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="admin/db-booking.html">Booking</a>
+                        </li>
+                        <li className="menu-item-has-children">
+                          <a href="admin/db-package.html">Package</a>
+                          <ul>
+                            <li>
+                              <a href="admin/db-package-active.html">
+                                Package Active
+                              </a>
+                            </li>
+                            <li>
+                              <a href="admin/db-package-pending.html">
+                                Package Pending
+                              </a>
+                            </li>
+                            <li>
+                              <a href="admin/db-package-expired.html">
+                                Package Expired
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="admin/db-comment.html">Comments</a>
+                        </li>
+                        <li>
+                          <a href="admin/db-wishlist.html">Wishlist</a>
+                        </li>
+                        <li>
+                          <a href="admin/login.html">Login</a>
+                        </li>
+                        <li>
+                          <a href="admin/forgot.html">Forget Password</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div className="header-btn">
+                <button className="button-primary">BOOK NOW</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mobile-menu-container"></div>
-      </header>
-      {/* <div id="de-preloader" /> */}
-      {/* page preloader close */}
-      {/* header begin */}
-      <header
-        className="transparent scroll-light has-topbar"
-        style={{ backgroundColor: "#156B7A" }}
-      >
-        {/* <div id="topbar" className="topbar-dark text-light">
+          <div className="mobile-menu-container"></div>
+        </header>
+        {/* <div id="de-preloader" /> */}
+        {/* page preloader close */}
+        {/* header begin */}
+        <header
+          className="transparent scroll-light has-topbar"
+          style={{ backgroundColor: "#156B7A" }}
+        >
+          {/* <div id="topbar" className="topbar-dark text-light">
             <div className="container">
               <div className="topbar-left xs-hide">
                 <div className="topbar-widget">
@@ -407,293 +416,308 @@ function Booking() {
               <div className="clearfix" />
             </div>
           </div> */}
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="de-flex sm-pt10">
-                <div className="de-flex-col">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="de-flex sm-pt10">
                   <div className="de-flex-col">
-                    {/* logo begin */}
-                    <div id="logo" style={{ cursor: "pointer" }}>
-                      {/* <a href="index.html"> */}
-                      <img
-                        className="logo-1"
-                        src="images/GLOOVE_marca_tagline_blanco.png"
-                        alt=""
-                        onClick={handleLogoClick}
-                        style={{ width: "150px", height: "60px" }}
-                      />
-                      <img
-                        className="logo-2"
-                        src="images/GLOOVE_marca_tagline_blanco.png"
-                        alt=""
-                        onClick={handleLogoClick}
-                        style={{ width: "150px", height: "60px" }}
-                      />
-                      {/* </a> */}
+                    <div className="de-flex-col">
+                      {/* logo begin */}
+                      <div id="logo" style={{ cursor: "pointer" }}>
+                        {/* <a href="index.html"> */}
+                        <img
+                          className="logo-1"
+                          src="images/GLOOVE_marca_tagline_blanco.png"
+                          alt=""
+                          onClick={handleLogoClick}
+                          style={{ width: "150px", height: "60px" }}
+                        />
+                        <img
+                          className="logo-2"
+                          src="images/GLOOVE_marca_tagline_blanco.png"
+                          alt=""
+                          onClick={handleLogoClick}
+                          style={{ width: "150px", height: "60px" }}
+                        />
+                        {/* </a> */}
+                      </div>
+                      {/* logo close */}
                     </div>
-                    {/* logo close */}
                   </div>
-                </div>
-                <div className="de-flex-col header-col-mid">
-                  <ul id="mainmenu" style={{ height: "auto" }}>
-                    <li>
-                      <a
-                        className="menu-item"
-                        href="index.html"
-                        style={{ color: "white", fontSize: "20px" }}
-                      >
-                        Inicio
-                      </a>
-                      <ul>
-                        <li>
-                          <a className="menu-item" href="02_dark-index-1.html">
-                            New: Homepage 1 Dark
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="02_dark-index-2.html">
-                            New: Homepage 2 Dark
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="index.html">
-                            Homepage Main
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="index-2.html">
-                            Homepage 2
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="index-3.html">
-                            Homepage 3
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="index-4.html">
-                            Homepage 4
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="index-5.html">
-                            Homepage 5
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="index-6.html">
-                            Homepage 6
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a
-                        className="menu-item"
-                        href="cars.html"
-                        style={{ color: "white", fontSize: "20px" }}
-                      >
-                        Reservas
-                      </a>
-                      <ul>
-                        <li>
-                          <a className="menu-item" href="cars.html">
-                            Cars List 1
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="02_dark-cars.html">
-                            Cars List 1 Dark
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="cars-list.html">
-                            Cars List 2
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="menu-item"
-                            href="02_dark-cars-list.html"
-                          >
-                            Cars List 2 Dark
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="car-single.html">
-                            Cars Single
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="menu-item"
-                            href="02_dark-car-single.html"
-                          >
-                            Cars Single Dark
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a
-                        className="menu-item"
-                        href="booking.html"
-                        style={{ color: "white", fontSize: "20px" }}
-                      >
-                        Experiencias
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="menu-item"
-                        href="account-dashboard.html"
-                        style={{ color: "white", fontSize: "20px" }}
-                      >
-                        Sobre nosotros
-                      </a>
-                      <ul>
-                        <li>
-                          <a
-                            className="menu-item"
-                            href="account-dashboard.html"
-                          >
-                            Dashboard
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="account-profile.html">
-                            My Profile
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="account-booking.html">
-                            My Orders
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="account-favorite.html">
-                            My Favorite Cars
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a
-                        className="menu-item"
-                        href="#"
-                        style={{ color: "white", fontSize: "20px" }}
-                      >
-                        Blog
-                      </a>
-                      <ul>
-                        <li>
-                          <a className="menu-item" href="about.html">
-                            About Us
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="contact.html">
-                            Contact
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="login.html">
-                            Login
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="register.html">
-                            Register
-                          </a>
-                        </li>
-                        <li>
-                          <a className="menu-item" href="404.html">
-                            Page 404
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a
-                        className="menu-item"
-                        href="#"
-                        style={{ color: "white", fontSize: "20px" }}
-                      >
-                        Contacto
-                      </a>
-                      <ul>
-                        <li>
-                          <a
-                            className="menu-item"
-                            href="news-standart-right-sidebar.html"
-                          >
-                            News Standard
-                          </a>
-                          <ul>
-                            <li>
-                              <a
-                                className="menu-item"
-                                href="news-standart-right-sidebar.html"
-                              >
-                                Right Sidebar
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="menu-item"
-                                href="news-standart-left-sidebar.html"
-                              >
-                                Left Sidebar
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="menu-item"
-                                href="news-standart-no-sidebar.html"
-                              >
-                                No Sidebar
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a
-                            className="menu-item"
-                            href="news-grid-right-sidebar.html"
-                          >
-                            News Grid
-                          </a>
-                          <ul>
-                            <li>
-                              <a
-                                className="menu-item"
-                                href="news-grid-right-sidebar.html"
-                              >
-                                Right Sidebar
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="menu-item"
-                                href="news-grid-left-sidebar.html"
-                              >
-                                Left Sidebar
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                className="menu-item"
-                                href="news-grid-no-sidebar.html"
-                              >
-                                No Sidebar
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    {/* <li>
+                  <div className="de-flex-col header-col-mid">
+                    <ul id="mainmenu" style={{ height: "auto" }}>
+                      <li>
+                        <a
+                          className="menu-item"
+                          href="index.html"
+                          style={{ color: "white", fontSize: "20px" }}
+                        >
+                          Inicio
+                        </a>
+                        <ul>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="02_dark-index-1.html"
+                            >
+                              New: Homepage 1 Dark
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="02_dark-index-2.html"
+                            >
+                              New: Homepage 2 Dark
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="index.html">
+                              Homepage Main
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="index-2.html">
+                              Homepage 2
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="index-3.html">
+                              Homepage 3
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="index-4.html">
+                              Homepage 4
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="index-5.html">
+                              Homepage 5
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="index-6.html">
+                              Homepage 6
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a
+                          className="menu-item"
+                          href="cars.html"
+                          style={{ color: "white", fontSize: "20px" }}
+                        >
+                          Reservas
+                        </a>
+                        <ul>
+                          <li>
+                            <a className="menu-item" href="cars.html">
+                              Cars List 1
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="02_dark-cars.html">
+                              Cars List 1 Dark
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="cars-list.html">
+                              Cars List 2
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="02_dark-cars-list.html"
+                            >
+                              Cars List 2 Dark
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="car-single.html">
+                              Cars Single
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="02_dark-car-single.html"
+                            >
+                              Cars Single Dark
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a
+                          className="menu-item"
+                          href="booking.html"
+                          style={{ color: "white", fontSize: "20px" }}
+                        >
+                          Experiencias
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="menu-item"
+                          href="account-dashboard.html"
+                          style={{ color: "white", fontSize: "20px" }}
+                        >
+                          Sobre nosotros
+                        </a>
+                        <ul>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="account-dashboard.html"
+                            >
+                              Dashboard
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="account-profile.html"
+                            >
+                              My Profile
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="account-booking.html"
+                            >
+                              My Orders
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="account-favorite.html"
+                            >
+                              My Favorite Cars
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a
+                          className="menu-item"
+                          href="#"
+                          style={{ color: "white", fontSize: "20px" }}
+                        >
+                          Blog
+                        </a>
+                        <ul>
+                          <li>
+                            <a className="menu-item" href="about.html">
+                              About Us
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="contact.html">
+                              Contact
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="login.html">
+                              Login
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="register.html">
+                              Register
+                            </a>
+                          </li>
+                          <li>
+                            <a className="menu-item" href="404.html">
+                              Page 404
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a
+                          className="menu-item"
+                          href="#"
+                          style={{ color: "white", fontSize: "20px" }}
+                        >
+                          Contacto
+                        </a>
+                        <ul>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="news-standart-right-sidebar.html"
+                            >
+                              News Standard
+                            </a>
+                            <ul>
+                              <li>
+                                <a
+                                  className="menu-item"
+                                  href="news-standart-right-sidebar.html"
+                                >
+                                  Right Sidebar
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="menu-item"
+                                  href="news-standart-left-sidebar.html"
+                                >
+                                  Left Sidebar
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="menu-item"
+                                  href="news-standart-no-sidebar.html"
+                                >
+                                  No Sidebar
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a
+                              className="menu-item"
+                              href="news-grid-right-sidebar.html"
+                            >
+                              News Grid
+                            </a>
+                            <ul>
+                              <li>
+                                <a
+                                  className="menu-item"
+                                  href="news-grid-right-sidebar.html"
+                                >
+                                  Right Sidebar
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="menu-item"
+                                  href="news-grid-left-sidebar.html"
+                                >
+                                  Left Sidebar
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  className="menu-item"
+                                  href="news-grid-no-sidebar.html"
+                                >
+                                  No Sidebar
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      {/* <li>
                         <a className="menu-item" href="#">
                           Elements
                         </a>
@@ -768,115 +792,185 @@ function Booking() {
                           </li>
                         </ul>
                       </li> */}
-                  </ul>
-                </div>
-                <div className="de-flex-col">
-                  <div className="menu_side_area">
-                    <button
-                      className="btn-main"
-                      onClick={handleBookNowClick}
-                      style={{
-                        backgroundColor: "white",
-                        color: "#156B7A",
-                        fontSize: "20px",
-                        padding: "10px 30px",
-                        borderRadius: "25px",
-                        display: "flex",
-                        gap: "10px",
-                      }}
-                    >
-                      <img
-                        src="./images/user-img.png"
-                        style={{ width: "20px", height: "20px" }}
-                      ></img>
-                      Login
-                    </button>
-                    <span id="menu-btn" />
+                    </ul>
+                  </div>
+                  <div className="de-flex-col">
+                    <div className="menu_side_area">
+                      <button
+                        className="btn-main"
+                        onClick={handleBookNowClick}
+                        style={{
+                          backgroundColor: "white",
+                          color: "#156B7A",
+                          fontSize: "20px",
+                          padding: "10px 30px",
+                          borderRadius: "25px",
+                          display: "flex",
+                          gap: "10px",
+                        }}
+                      >
+                        {/* <img
+                          src="./images/user-img.png"
+                          style={{ width: "20px", height: "20px" }}
+                        ></img> */}
+                        <FontAwesomeIcon
+                          icon={faUser}
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            marginTop: "4px",
+                          }}
+                        />
+                        Login
+                      </button>
+                      <span id="menu-btn" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
       {/* header close */}
       {/* content begin */}
       <div className="no-bottom no-top zebra" id="content">
         <div id="top" />
         {/* section begin */}
-        <section className="home-slider-section" style={{ padding: "0px" }}>
-          <div className="home-slider">
-            <Carousel
-              className="home-slider"
-              responsive={responsive}
-              showDots={true}
-              infinite={true}
-              autoPlay={false}
-              autoPlaySpeed={3500}
-              dotListClass="custom-dot-list-style"
-              slidesToSlide={1}
-            >
-              <div className="home-banner-items">
-                <div
-                  className="banner-inner-wrap"
-                  style={{
-                    backgroundImage: "url(./images/slider-1.png)",
-                    backgroundSize: "cover !important",
-                  }}
-                ></div>
-                <div className="banner-content-wrap">
-                  <div className="container">
-                    <div className="banner-content text-center">
-                      <h2 className="banner-title" style={{ fontSize: "70px" }}>
-                        Maximiza el potencial de tu propiedad con Gloove
-                      </h2>
-                      <p>
-                        Gestión experta, ingresos optimizados y tranquilidad
-                        total
-                      </p>
-                      {/* <a href="#" className="button-primary">
-                            CONTINUE READING
-                          </a> */}
+        <section
+            className="home-slider-section"
+            style={{ padding: "0px", position: "relative" }}
+          >
+            <div className="home-slider">
+              <Carousel
+                className="home-slider"
+                responsive={responsive}
+                showDots={true}
+                infinite={true}
+                autoPlay={false}
+                autoPlaySpeed={3500}
+                dotListClass="custom-dot-list-style"
+                slidesToSlide={1}
+              >
+                <div className="home-banner-items">
+                  <div
+                    className="banner-inner-wrap"
+                    style={{
+                      backgroundImage: "url(./images/slider-1.png)",
+                      backgroundSize: "cover !important",
+                    }}
+                  ></div>
+                  <div className="banner-content-wrap">
+                    <div className="container">
+                      <div className="banner-content text-center">
+                        <h2
+                          className="banner-title"
+                          style={{ fontSize: "70px" }}
+                        >
+                          Maximiza el potencial de tu propiedad con Gloove
+                        </h2>
+                        <p>
+                          Gestión experta, ingresos optimizados y tranquilidad
+                          total
+                        </p>
+                        {/* <a href="#" className="button-primary">
+                          CONTINUE READING
+                        </a> */}
+                      </div>
                     </div>
                   </div>
+                  <div className="overlay"></div>
                 </div>
-                <div className="overlay"></div>
-              </div>
-              <div className="home-banner-items">
-                <div
-                  className="banner-inner-wrap"
-                  style={{
-                    backgroundImage: "url(./images/slider-2.png)",
-                    backgroundSize: "cover !important",
-                  }}
-                ></div>
-                <div className="banner-content-wrap">
-                  <div className="container">
-                    <div className="banner-content text-center">
-                      <h2 className="banner-title" style={{ fontSize: "70px" }}>
-                        Maximiza el potencial de tu propiedad con Gloove
-                      </h2>
-                      <p>
-                        Gestión experta, ingresos optimizados y tranquilidad
-                        total
-                      </p>
-                      {/* <a href="#" className="button-primary">
-                            CONTINUE READING
-                          </a> */}
+                <div className="home-banner-items">
+                  <div
+                    className="banner-inner-wrap"
+                    style={{
+                      backgroundImage: "url(./images/slider-2.png)",
+                      backgroundSize: "cover !important",
+                    }}
+                  ></div>
+                  <div className="banner-content-wrap">
+                    <div className="container">
+                      <div className="banner-content text-center">
+                        <h2
+                          className="banner-title"
+                          style={{ fontSize: "70px" }}
+                        >
+                          Maximiza el potencial de tu propiedad con Gloove
+                        </h2>
+                        <p>
+                          Gestión experta, ingresos optimizados y tranquilidad
+                          total
+                        </p>
+                        {/* <a href="#" className="button-primary">
+                          CONTINUE READING
+                        </a> */}
+                      </div>
                     </div>
                   </div>
+                  <div className="overlay"></div>
                 </div>
-                <div className="overlay"></div>
+              </Carousel>
+              {/* <img src="./images/happy (9).png" alt="" style={{width: "50px", height: "50px", backgroundColor: "rgb(21, 107, 122)"}}></img> */}
+              <div
+                className=""
+                style={{
+                  position: "absolute",
+                  transform: "translate(-50%, -50%)",
+                  top: "50%",
+                  right: "0%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <a href="#">
+                  <img
+                    src="./images/happy (9).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/happy (6).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/happy (7).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/happy (8).png"
+                    alt=""
+                    style={{
+                      width: "70px",
+                      height: "70px",
+                    }}
+                  ></img>
+                </a>
               </div>
-            </Carousel>
-          </div>
-        </section>
+            </div>
+          </section>
         {/* section close */}
         <section id="section-cars">
           <div className="container">
             <div className="row">
               <div className="col-lg-3">
-                <div
+                <div                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                   className="item_filter_group"
                   style={{ backgroundColor: "#156B7A", padding: "15px" }}
                 >
